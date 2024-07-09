@@ -34,7 +34,8 @@ function playRound(playerMove) {
     win++;
   }
 
-  alert(`You picked ${playerMove}. Computer picked ${computerMove}. ${result}`);
+  const resultElement = document.querySelector(".result");
+  resultElement.innerHTML = `You picked ${playerMove}. Computer picked ${computerMove}. ${result}`;
   console.log(`Win: ${win} Lose: ${lose} Tie: ${tie}`);
 }
 
@@ -45,4 +46,6 @@ function resetGame() {
   tie = 0;
   console.log("cleared....");
   console.log(`Win: ${win} Lose: ${lose} Tie: ${tie}`);
+  const resultElement = document.querySelector(".result");
+  resultElement.innerHTML = "";
 }
